@@ -1,0 +1,26 @@
+class Car:
+    def __init__(self, license, speed):
+        self.license = license
+        self.speed = speed
+
+    def accelerate(self, spd):
+        self.speed += spd
+
+    def brake(self):
+        self.speed -= 10
+
+c = Car("AB1234", 30)
+c.accelerate(5)
+c.brake()
+print(f"{c.speed}km/h")
+
+
+
+class Tesla(Car): 
+    def accelerate(self, spd):
+        if spd == 0:
+            return super().brake()
+        return super().accelerate(spd)
+def brake(self):
+    pass
+
